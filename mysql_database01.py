@@ -5,14 +5,14 @@ import mysql.connector as connector
 
 #The password I'm mentioning here isn't the correct one since I don't wanna disclose my password.
 connection = connector.connect(user = "root", password = "incorrect") 
-#Create cursor object
+
 cursor = connection.cursor()
 
-#Create database
+#Create a database
 create_database_query = """CREATE DATABASE little_lemon5"""
 cursor.execute(create_database_query)
 
-#create table
+#create a table
 use_database_query = """USE little_lemon5"""
 cursor.execute(use_database_query)
 create_bookings_table = """CREATE TABLE bookings(GuestFirstName VARCHAR(200), GuestLastName VARCHAR(200), TableNo VARCHAR(100), BookingSlot VARCHAR(100), EmployeeID INT, PRIMARY KEY(EmployeeID))"""
